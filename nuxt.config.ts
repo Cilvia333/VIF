@@ -52,6 +52,11 @@ const config: Configuration = {
   ],
 
   axios: {},
+  styleResources: {
+    // your settings here
+    sass: ['./src/assets/sass/main.sass']
+  },
+
   build: {
     cache: true,
 		postcss: {
