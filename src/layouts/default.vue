@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+.default
  nuxt
 </template>
 
