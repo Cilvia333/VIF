@@ -31,7 +31,7 @@ const config: Configuration = {
   
   css: ['ress/ress.css'],
 
-  plugins: [],
+  plugins: ['@/plugins/composition-api'],
 
   buildModules: [
     '@nuxtjs/eslint-module',
