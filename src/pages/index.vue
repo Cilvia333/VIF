@@ -1,7 +1,21 @@
 <template lang="pug">
   main
-    h1 this site is beautiful
+    h1 {{message}}
+    EyeCatch
 </template>
+
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component({
+  components: {
+    EyeCatch: () => import('~/components/contents/eye-catch.vue')
+  }
+})
+export default class Index extends Vue {
+  message: string = 'This is a message'
+}
+</script>
 
 <style>
 .container {
