@@ -31,7 +31,10 @@ const config: Configuration = {
   
   css: ['ress/ress.css'],
 
-  plugins: ['@/plugins/composition-api'],
+  plugins: [
+    '@/plugins/composition-api',
+    '@/plugins/vue-scrollto'
+  ],
 
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -54,7 +57,7 @@ const config: Configuration = {
   axios: {},
   styleResources: {
     // your settings here
-    sass: ['./src/assets/sass/main.sass']
+    sass: ['~/assets/sass/main.sass', 'mathsass']
   },
 
   build: {

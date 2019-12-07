@@ -1,6 +1,28 @@
 <template lang="pug">
 section.eye-catch
-  h1 eye-catch
+  .background
+    .magenta
+    .yellow
+    .cyan
+  .container
+    img.logo-img(src="~/assets/img/logo.png")
+    .logo-text
+      .logo-title 
+        h3 バーチャルアイドルフェスティバル
+      .logo-tag 
+        h3 #VIF
+    .overview
+      .locate 
+        h2 @DMM Hole
+      .date 
+        h2 2020/1/20
+      .time 
+        h2 18:00〜21:00
+    .nav-text
+      h2 WE ARE <br> THE VIRTUAL IDOL
+    .nav-arrow
+      svg-icon.arrow-svg(name="arrow")
+
 </template>
 
 <script lang="ts">
@@ -13,6 +35,87 @@ export default class EyeCatch extends Vue {
 </script>
 
 <style lang="sass" scoped>
-h1
-  color: #111
+.eye-catch
+  position: relative
+
+.background
+  position: absolute
+  overflow-x: hidden
+  width: 100vw
+  height: 120vh
+  top: -7%
+  left: 0
+  z-index: -1
+  & > *
+    position: absolute
+    width: 100%
+  .magenta
+    top: -100px
+    left: 0
+    height: 200px
+    background-color: $theme-magenta
+    transform: skew(0deg,10.5deg)
+  .yellow
+    top: 20%
+    left: -15%
+    height: 40vh
+    border-left: 150vw solid $theme-yellow;
+    border-top: 0px solid transparent;
+    border-bottom: 100px solid transparent;
+    transform: rotate(-15deg)
+  .cyan
+    top: 65%
+    left: -15%
+    height: 35vh
+    border-left: 150vw solid $theme-cyan;
+    border-top: 30px solid transparent;
+    border-bottom: 50px solid transparent;
+    transform: rotate(15deg)
+
+.container
+  height: 100vh
+
+.logo-img
+  width: 90%
+  transform: rotate(-3.17deg)
+  margin-top: 21vh
+
+.logo-text
+  text-align: right
+  margin-top: 10px
+  & > *
+    h3
+      background-color: $black
+      color: $white
+      font-size: 0.5rem
+      display: inline
+
+.overview
+  text-align: right
+  & > *
+    h2
+      display: inline
+      font-weight: bold
+  .locate > h2
+    background: linear-gradient(0deg,rgba($theme-cyan, 1) 0%,rgba($theme-cyan, 1) 50%,rgba($white, 0) 50%,rgba($white, 0) 100%)
+  .date > h2
+    background: linear-gradient(0deg,rgba($theme-magenta, 1) 0%,rgba($theme-magenta, 1) 50%,rgba($white, 0) 50%,rgba($white, 0) 100%)
+  .time > h2
+    background: linear-gradient(0deg,rgba($theme-yellow, 1) 0%,rgba($theme-yellow, 1) 50%,rgba($white, 0) 50%,rgba($white, 0) 100%)
+
+.nav-text
+  text-align: left
+  color: $white
+  margin-top: 30px
+  h2
+    font-size: 2em
+    font-weight: bold
+
+.nav-arrow
+  text-align: center
+  margin: 10px 0px
+
+  .arrow-svg
+    height: 50px
+    display: inline
 </style>

@@ -13,7 +13,6 @@ module.exports = {
 	extends: [
 		'@nuxtjs/eslint-config-typescript',
 		'plugin:nuxt/recommended',
-		'airbnb-base',
 		'plugin:eslint-comments/recommended',
 		'plugin:prettier/recommended',
 		'prettier/vue',
@@ -41,6 +40,8 @@ module.exports = {
 		'global-require': 'off',
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'max-classes-per-file': 'warn',
+		'import/prefer-default-export': 'warn',
 		'vue/component-name-in-template-casing': [
 			'error',
 			'PascalCase',
