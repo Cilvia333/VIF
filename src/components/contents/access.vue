@@ -1,6 +1,6 @@
 <template lang="pug">
-section.eye-catch
-  h1 eye-catch
+section.access
+  h1 access
 </template>
 
 <script lang="ts">

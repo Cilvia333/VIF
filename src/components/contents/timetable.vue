@@ -1,6 +1,6 @@
 <template lang="pug">
-section.eye-catch
-  h1 eye-catch
+section.timetable
+  h1 timetable
 </template>
 
 <script lang="ts">

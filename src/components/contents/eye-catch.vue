@@ -18,10 +18,11 @@ section.eye-catch
         h2 2020/1/20
       .time 
         h2 18:00〜21:00
-    .nav-text
-      h2 WE ARE <br> THE VIRTUAL IDOL
-    .nav-arrow
-      svg-icon.arrow-svg(name="arrow")
+    .next
+      .next-text
+        h2 WE ARE <br> THE VIRTUAL IDOL
+      .next-arrow
+        svg-icon.next-svg(name="arrow")
 
 </template>
 
@@ -103,7 +104,12 @@ export default class EyeCatch extends Vue {
   .time > h2
     background: linear-gradient(0deg,rgba($theme-yellow, 1) 0%,rgba($theme-yellow, 1) 50%,rgba($white, 0) 50%,rgba($white, 0) 100%)
 
-.nav-text
+.next
+  position: absolute
+  width: calc(100% - 40px)
+  bottom: 20px
+
+.next-text
   text-align: left
   color: $white
   margin-top: 30px
@@ -111,11 +117,11 @@ export default class EyeCatch extends Vue {
     font-size: 2em
     font-weight: bold
 
-.nav-arrow
+.next-arrow
   text-align: center
   margin: 10px 0px
 
-  .arrow-svg
+  .next-svg
     height: 50px
     display: inline
 </style>

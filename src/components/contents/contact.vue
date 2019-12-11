@@ -1,6 +1,6 @@
 <template lang="pug">
-section.eye-catch
-  h1 eye-catch
+section.contact
+  h1 contact
 </template>
 
 <script lang="ts">
