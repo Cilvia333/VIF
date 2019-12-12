@@ -4,6 +4,7 @@
     News
     LineUp
     TimeTable
+    Attention
     Access
     Contact
     Back2top
@@ -18,6 +19,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
     News: () => import('~/components/contents/news.vue'),
     LineUp: () => import('~/components/contents/lineup.vue'),
     TimeTable: () => import('~/components/contents/timetable.vue'),
+    Attention: () => import('~/components/contents/attention.vue'),
     Access: () => import('~/components/contents/access.vue'),
     Contact: () => import('~/components/contents/contact.vue'),
     Back2top: () => import('~/components/navigations/backTop.vue')

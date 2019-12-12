@@ -3,9 +3,9 @@
   Header(v-if="isMobile")
   nuxt(v-if="isMobile")
   Footer(v-if="isMobile")
-  .pc(v-if="!isMobile")
-    h1 モバイルからアクセスしてください
-    img(src="~/assets/img/QR.png")
+  //- .pc(v-if="!isMobile")
+  //-   h1 モバイルからアクセスしてください
+  //-   img(src="~/assets/img/QR.png")
 </template>
 
 <script lang="ts">
@@ -18,7 +18,7 @@ import { Vue, Component } from 'vue-property-decorator'
   }
 })
 export default class Default extends Vue {
-  isMobile: boolean = false
+  isMobile: boolean = true
 
   mounted() {
     const regexp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i

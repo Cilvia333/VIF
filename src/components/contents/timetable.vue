@@ -7,9 +7,9 @@ section#timetable
         .time-info
           .info-num #
             | {{index + 1}}
-          .info-time 16:00<br>
+          .info-time {{item.time0}}<br>
             span 〜
-            | <br> 16:30
+            | <br> {{item.time1}}
         .time-group
           img.group-img(:src="require(`@/assets/img/${item.img}`)")
           h4.group-name {{item.name}}
@@ -21,7 +21,8 @@ import { Vue, Component } from 'vue-property-decorator'
 type Gourp = {
   name: string
   img: string
-  description?: string
+  time0: string
+  time1: string
 }
 
 @Component
@@ -29,23 +30,33 @@ export default class TimeTable extends Vue {
   groups: Gourp[] = [
     {
       name: '夏風アザミ',
-      img: 'logo.png'
+      img: 'logo.png',
+      time0: '16:00',
+      time1: '16:30'
     },
     {
       name: '妄想機巧少女',
-      img: 'logo.png'
+      img: 'logo.png',
+      time0: '16:30',
+      time1: '17:00'
     },
     {
       name: 'パレットフルカラーズ',
-      img: 'logo.png'
+      img: 'logo.png',
+      time0: '17:00',
+      time1: '17:30'
     },
     {
       name: '12bite',
-      img: 'logo.png'
+      img: 'logo.png',
+      time0: '17:30',
+      time1: '18:00'
     },
     {
       name: '喜雨かなで',
-      img: 'logo.png'
+      img: 'logo.png',
+      time0: '18:00',
+      time1: '18:30'
     }
   ]
 }

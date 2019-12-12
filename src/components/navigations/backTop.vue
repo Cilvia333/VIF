@@ -42,6 +42,8 @@ export default class back2top extends Vue {
   cursor: pointer
 
   transition: all .3s ease-out
+  z-index: 200
+  filter: drop-shadow(0 2px 6px rgba($black-gray,0.8));
 
 .show-button
   opacity: 1
