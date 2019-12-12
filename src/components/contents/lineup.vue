@@ -12,7 +12,8 @@ section#lineup
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import { Group } from '~/components/parts/groupCard.vue'
+import { Group } from '~/store/modules/idols'
+import { store } from '~/store/index'
 
 @Component({
   components: {
@@ -20,37 +21,16 @@ import { Group } from '~/components/parts/groupCard.vue'
   }
 })
 export default class LineUp extends Vue {
-  groups: Group[] = [
-    {
-      name: '夏風アザミ',
-      img: 'logo.png',
-      description: 'hoge'
-    },
-    {
-      name: '妄想機巧少女',
-      img: 'logo.png',
-      description: 'hoge'
-    },
-    {
-      name: 'パレットフルカラーズ',
-      img: 'logo.png',
-      description: 'hoge'
-    },
-    {
-      name: '12bite',
-      img: 'logo.png',
-      description: 'hoge'
-    },
-    {
-      name: '喜雨かなで',
-      img: 'logo.png',
-      description: 'hoge'
-    }
-  ]
+  public get groups(): Group {
+    return store.getters['idols/getIdols']
+  }
 }
 </script>
 
 <style lang="sass" scoped>
+.container
+  margin-bottom: 50px
+
 .groups-item
   margin-top: 30px
   list-style: none

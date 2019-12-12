@@ -2,10 +2,12 @@
 /* eslint import/prefer-default-export: "off" */
 import { createStore, Module } from 'vuex-smart-module'
 import { menu } from './modules/menu'
+import { idols } from './modules/idols'
 
 const root = new Module({
   modules: {
-    menu
+    menu,
+    idols
   }
 })
 

@@ -1,8 +1,8 @@
 <template lang="pug">
-li.groupCard
+.groupCard
   .overview(@click="changeActive")
     img.group-img(:src="require(`@/assets/img/${group.img}`)")
-  .detail(:class="{active:isActive}")
+  .detail(:class="{active:isActive}" :style="backColor")
     .group-cross(@click="changeActive")
       svg-icon.cross-svg(name="close")
     .group-name
@@ -15,17 +15,19 @@ li.groupCard
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
-export type Group = {
-  name: string
-  img: string
-  description?: string
-}
+import { Group } from '~/store/modules/idols'
 
 @Component
 export default class GroupCard extends Vue {
   @Prop({ type: Object, required: true }) readonly group!: Group
 
   isActive: boolean = false
+
+  public get backColor(): Object {
+    return {
+      background: this.group.color
+    }
+  }
 
   changeActive() {
     this.isActive = !this.isActive
@@ -54,7 +56,6 @@ export default class GroupCard extends Vue {
   right: 0
   z-index: 400
 
-  background-color: rgba($theme-magenta, 0.95)
   padding: 20px
 
   display: none
