@@ -57,14 +57,11 @@ export default class GroupCard extends Vue {
   background-color: rgba($theme-magenta, 0.95)
   padding: 20px
 
-  opacity: 0
   display: none
 
-  transition: all .3s ease-out
-
   &.active
-    opacity: 1
     display: block
+    animation: show .3s ease-out 0s
 
   .group-cross
     text-align: right
