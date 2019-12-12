@@ -5,12 +5,52 @@
 section
   margin: 0 auto
   padding: 0
-  min-height: 100vh
   display: flex
   justify-content: center
   align-items: center
   text-align: center
+  backface-visibility: hidden
+
+  // Section Titleの色指定
+  &:nth-of-type(3n)
+    .section-title
+      &::after
+        background-color: $theme-cyan
+
+  &:nth-of-type(3n+1)
+    .section-title
+      &::after
+        background-color: $theme-magenta
+
+  &:nth-of-type(3n+2)
+    .section-title
+      &::after
+        background-color: $theme-yellow
+
+  &:nth-last-of-type(-n+2)
+    background: $black-gray
+    color: $white
+    .section-title
+      color: $white
+  
 
 .container
   width: 100vw
-  padding: 0px 20px
+  padding: 20px 20px
+
+.section-title
+  text-align: center
+  font-size: 3rem
+  display: inline
+  position: relative
+  z-index: 2
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: 5px
+    left: -10%
+    width: 120%
+    height: 12px
+    z-index: -1
+    transform: rotate(-3.73deg)

@@ -1,6 +1,10 @@
 <template lang="pug">
-section.access
-  h1 access
+section#access
+  .background
+    .top
+  .container
+    h1.section-title access
+    p なんかちずがいっぱいならんぶかんじ
 </template>
 
 <script lang="ts">
@@ -13,6 +17,23 @@ export default class Access extends Vue {
 </script>
 
 <style lang="sass" scoped>
-h1
-  color: #111
+#access
+  position: relative
+  margin-top: 50px
+
+.background
+  position: absolute
+  top: -50px
+  left: 0
+  width: 100vw
+  height: 500px
+  overflow-x: hidden
+.top
+  position: absolute
+  width: 120vw
+  height: 100px
+  top: 30px
+  left: -10px
+  background-color: $black-gray
+  transform: rotate(6deg)
 </style>

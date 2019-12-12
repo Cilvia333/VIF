@@ -14,12 +14,12 @@ import { Vue, Component } from 'vue-property-decorator'
     Footer: () => import('~/components/navigations/footer.vue')
   }
 })
-export default class EyeCatch extends Vue {}
+export default class Default extends Vue {}
 </script>
 
 <style lang="sass">
 html
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-family: Futura, 'Century Gothic', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
   font-size: 16px
   word-spacing: 1px
   -ms-text-size-adjust: 100%

@@ -1,5 +1,5 @@
 <template lang="pug">
-section.eye-catch
+section#eyecatch
   .background
     .magenta
     .yellow
@@ -36,7 +36,7 @@ export default class EyeCatch extends Vue {
 </script>
 
 <style lang="sass" scoped>
-.eye-catch
+#eyecatch
   position: relative
 
 .background
@@ -75,6 +75,8 @@ export default class EyeCatch extends Vue {
 
 .container
   height: 100vh
+  padding-top: 0
+  padding-bottom: 0
 
 .logo-img
   width: 90%

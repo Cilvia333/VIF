@@ -5,13 +5,13 @@ header
         .menu-icon
     nav.header-nav(:class="{ 'nav_open': isActiveHamburger }")
       ul.header-menu
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#eye-catch'" to="/") TOP
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#news'" to="/teams") NEWS
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#line-up'" to="/rules") LINE UP
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#time-table'" to="/result") TIME TABLE
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#attention'" to="/result") ATTENTION
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#access'" to="/result") ACCESS
-        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#contact'" to="/result") CONTACT
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#eyecatch'" to="/") TOP
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#news'" to="/") NEWS
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#lineup'" to="/") LINE UP
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#timetable'" to="/") TIME TABLE
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#attention'" to="/") ATTENTION
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#access'" to="/") ACCESS
+        li: nuxt-action-link.header-link(@click="navClick" v-scroll-to="'#contact'" to="/") CONTACT
 </template>
 
 <script lang="ts">
