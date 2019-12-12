@@ -2,13 +2,15 @@
 .groupCard
   .overview(@click="changeActive")
     img.group-img(:src="require(`@/assets/img/${group.img}`)")
-  .detail(:class="{active:isActive}" :style="backColor")
-    .group-cross(@click="changeActive")
-      svg-icon.cross-svg(name="close")
-    .group-name
-      h2 {{group.name}}
-    .group-description
-      p {{group.description}}
+  .detail(:class="{active:isActive, black: isBlack}" :style="backColor" )
+    .inner
+      .group-cross(@click="changeActive")
+        svg-icon.cross-svg(name="close_bk" v-if="isBlack")
+        svg-icon.cross-svg(name="close" v-else)
+      .group-name
+        h2 {{group.name}}
+      .group-description
+        p {{group.description}}
     img.group-img(:src="require(`@/assets/img/${group.img}`)")
 
 </template>
@@ -27,6 +29,10 @@ export default class GroupCard extends Vue {
     return {
       background: this.group.color
     }
+  }
+
+  public get isBlack(): boolean {
+    return this.group.text === 'black'
   }
 
   changeActive() {
@@ -56,9 +62,10 @@ export default class GroupCard extends Vue {
   right: 0
   z-index: 400
 
-  padding: 20px
-
   display: none
+
+  .inner
+    padding: 20px
 
   &.active
     display: block
@@ -94,4 +101,14 @@ export default class GroupCard extends Vue {
 
   .group-img
     margin-top: 40px
+    background: rgba($white, 1)
+    padding: 10px
+
+  &.black
+    .cross-svg
+      fill: $black
+    h2, p
+      color: $black
+    .group-name::after
+      background-color: $black
 </style>
