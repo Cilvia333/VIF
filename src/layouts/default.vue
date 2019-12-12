@@ -31,8 +31,9 @@ export default class Default extends Vue {
 </script>
 
 <style lang="sass">
+
 html
-  font-family: Futura, 'Century Gothic', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+  font-family: Futura, 'Century Gothic', 'Noto Sans JP', sans-serif
   font-size: 16px
   word-spacing: 1px
   -ms-text-size-adjust: 100%

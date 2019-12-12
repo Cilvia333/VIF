@@ -46,7 +46,7 @@ header
   top: 0
   left: 0
   background-color: rgba($white, 0)
-  z-index: 99
+  z-index: 300
 
 .container
   width: 100%
@@ -77,13 +77,13 @@ header
     z-index: 299
     text-align: center
     transform-origin: left top
-    transform: scale(1, 0)
+    transform: translateY(-100%)
     transition: all 0.3s cubic-bezier(0, 1.06, 0.54, 1)
     overflow: hidden
 
   &.nav_open
     @include screen-mq(md)
-      transform: scale(1, 1)
+      transform: translateY(0%)
 
   ul
     display: flex
@@ -100,7 +100,6 @@ header
       margin: 0
       padding: 100px 0
       width: 90%
-      height: calc(80% - 200px)
       flex-direction: column
       align-items: flex-end
       justify-content: space-between
@@ -115,6 +114,32 @@ header
         text-align: center
 
 .header-menu
+  li
+    &:nth-child(1)
+      margin-bottom: 30px
+      position: relative
+      .header-link
+        color: $black !important
+      &::after
+        content: ""
+        position: absolute
+        bottom: -20px
+        left: 0
+        width: 150%
+        height: 3px
+        background-color: $black
+    &:nth-child(3n)
+      .header-link
+        color: $theme-cyan
+
+    &:nth-child(3n+1)
+      .header-link
+        color: $theme-magenta
+
+    &:nth-child(3n+2)
+      .header-link
+        color: $theme-yellow
+
   .header-link
     position: relative
     display: inline-block
@@ -126,8 +151,7 @@ header
 
     transition: all 0.5s cubic-bezier(0, 1.06, 0.54, 1)
 
-    &:hover,
-    &.nuxt-link-active
+    &:hover
       color: red
       &::after
         width: 100%
@@ -139,21 +163,6 @@ header
 
     @include screen-mq(sm)
       font-size: 40px
-
-    &::after
-      background-color: red
-      content: ''
-      display: block
-      position: absolute
-      transition: all 0.5s cubic-bezier(0, 1.06, 0.54, 1)
-
-      bottom: -3px
-      height: 1px
-      left: 0px
-      width: 0px
-
-      @include screen-mq(md)
-        height: 3px
 
 //Menu Button
 
