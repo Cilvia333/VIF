@@ -1,8 +1,11 @@
 <template lang="pug">
 .default
-  Header
-  nuxt
-  Footer
+  Header(v-if="isMobile")
+  nuxt(v-if="isMobile")
+  Footer(v-if="isMobile")
+  .pc(v-if="!isMobile")
+    h1 モバイルからアクセスしてください
+    img(src="~/assets/img/QR.png")
 </template>
 
 <script lang="ts">
@@ -14,7 +17,17 @@ import { Vue, Component } from 'vue-property-decorator'
     Footer: () => import('~/components/navigations/footer.vue')
   }
 })
-export default class Default extends Vue {}
+export default class Default extends Vue {
+  isMobile: boolean = false
+
+  mounted() {
+    const regexp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+    if (window.navigator.userAgent.search(regexp) !== -1) {
+      this.isMobile = true
+    }
+    console.log(window.navigator.userAgent)
+  }
+}
 </script>
 
 <style lang="sass">
@@ -33,4 +46,7 @@ html
 *::after
   box-sizing: border-box
   margin: 0
+
+.pc
+  padding: 30px
 </style>

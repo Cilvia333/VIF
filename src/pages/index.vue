@@ -23,7 +23,5 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
     Back2top: () => import('~/components/navigations/backTop.vue')
   }
 })
-export default class Index extends Vue {
-  message: string = 'This is a message'
-}
+export default class Index extends Vue {}
 </script>
