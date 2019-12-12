@@ -6,6 +6,7 @@
     TimeTable
     Access
     Contact
+    Back2top
 </template>
 
 <script lang="ts">
@@ -18,7 +19,8 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
     LineUp: () => import('~/components/contents/lineup.vue'),
     TimeTable: () => import('~/components/contents/timetable.vue'),
     Access: () => import('~/components/contents/access.vue'),
-    Contact: () => import('~/components/contents/contact.vue')
+    Contact: () => import('~/components/contents/contact.vue'),
+    Back2top: () => import('~/components/navigations/backTop.vue')
   }
 })
 export default class Index extends Vue {

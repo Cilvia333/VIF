@@ -1,18 +1,55 @@
 <template lang="pug">
-section#timetable
-  h1.section-title timetable
+.back2top(v-scroll-to="'#eyecatch'" :class="{'show-button':position > 200}")
+  svg-icon.icon(name="top")
+  h2.text TOP
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component
-export default class TimeTable extends Vue {
-  message: string = 'This is a message'
+export default class back2top extends Vue {
+  position: number = 0
+
+  mounted() {
+    if (!process.browser) return
+    this.$nextTick(() => {
+      window.addEventListener('scroll', this.handleScroll)
+    })
+  }
+
+  handleScroll() {
+    this.position = window.scrollY
+  }
 }
 </script>
 
 <style lang="sass" scoped>
-h1
-  color: #111
+.back2top
+  background-color: $white
+  border-radius: 50%
+  size: 75px
+  bottom: 65px
+  right: 10px
+  position: fixed
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  opacity: 0
+  cursor: pointer
+
+  transition: all .3s ease-out
+
+.show-button
+  opacity: 1
+
+.icon
+  size: 30px
+
+.text
+  text-align: center
+  font-size: 1rem
 </style>
