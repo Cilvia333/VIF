@@ -3,6 +3,10 @@ section#eyecatch
   .background
     .magenta
     .yellow
+    .star
+      img(src="~/assets/img/star.png")
+    .star2
+      img(src="~/assets/img/star.png")
     .cyan
   .container
     img.logo-img(src="~/assets/img/logo.png")
@@ -59,11 +63,27 @@ export default class EyeCatch extends Vue {
   .yellow
     top: 20%
     left: -15%
-    height: 40vh
+    height: 42vh
     border-left: 150vw solid $theme-yellow;
     border-top: 0px solid transparent;
-    border-bottom: 100px solid transparent;
+    border-bottom: 95px solid transparent;
     transform: rotate(-15deg)
+  .star
+    background-color: rgba($white, 0)
+    width: 100px
+    height: 50px
+    top: 48%
+    left: 10px
+    img
+      width: 100%
+  .star2
+    background-color: rgba($white, 0)
+    width: 100px
+    height: 50px
+    top: 18%
+    right: 10px
+    img
+      width: 100%
   .cyan
     top: 65%
     left: -15%
