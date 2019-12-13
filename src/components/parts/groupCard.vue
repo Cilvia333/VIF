@@ -9,9 +9,10 @@
         svg-icon.cross-svg(name="close" v-else)
       .group-name
         h2 {{group.name}}
+    img.group-img(:src="require(`@/assets/img/${group.img}`)")
+    .inner
       .group-description
         p {{group.description}}
-    img.group-img(:src="require(`@/assets/img/${group.img}`)")
 
 </template>
 
