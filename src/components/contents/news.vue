@@ -18,16 +18,16 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class News extends Vue {
   news = [
     {
-      date: '11/12/12',
-      title: 'ウェブサイトを公開しました！'
+      date: '19/12/13',
+      title: '会場を公開しました！'
     },
     {
-      date: '11/12/12',
-      title: 'ウェブサイトを公開しました！',
-      text: 'よろしくおねがいします！'
+      date: '19/12/05',
+      title: 'LINE UPを更新しました',
+      text: 'アイドルたちが増えました！！！!!!'
     },
     {
-      date: '11/12/12',
+      date: '19/11/30',
       title: 'ウェブサイトを公開しました！'
     }
   ]
