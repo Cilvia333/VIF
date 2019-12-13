@@ -13,7 +13,7 @@ section#eyecatch
         h3 #VIF
     .overview
       .locate 
-        h2 @DMM Hole
+        h2 @DMM VR Theater
       .date 
         h2 2020/1/20
       .time 
