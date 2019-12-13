@@ -24,7 +24,7 @@ export default class News extends Vue {
     {
       date: '19/12/05',
       title: 'LINE UPを更新しました',
-      text: 'アイドルたちが増えました！！！!!!'
+      text: 'アイドルたちが増えました！！！'
     },
     {
       date: '19/11/30',
