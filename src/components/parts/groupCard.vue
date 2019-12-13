@@ -74,7 +74,7 @@ export default class GroupCard extends Vue {
   .group-cross
     text-align: right
     .cross-svg
-      size: 60px
+      size: 50px
 
   .group-name
     position: relative

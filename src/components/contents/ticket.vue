@@ -1,13 +1,18 @@
 <template lang="pug">
-section#news
+section#ticket
   .container
-    h1.section-title news
-    ul.news-table
-      li.news-item(v-for="(item, index) in news" :key="`news_${index}`")
-        .news-header
-          p {{item.date}}
-          h2 {{item.title}}
-        p.news-text(v-if="item.text") {{item.text}}
+    h1.section-title Ticket
+    ul.tickets
+      li.tickets-item
+        h2.ticket-title S席 8,000円（税込）
+        p.ticket-text アリーナ席、イベントチケット限定グッズ付き
+      li.tickets-item
+        h2.ticket-title A席 7,000円（税込）
+        p.ticket-text イベントチケット限定グッズ付き
+      li.tickets-item
+        h2.ticket-title B席 5,500円（税込）
+
+      
 
 </template>
 
@@ -35,33 +40,9 @@ export default class Ticket extends Vue {
 </script>
 
 <style lang="sass" scoped>
-.news-table
+.tickets
   margin: 30px 0px
 
-.news-item
-  margin: 20px
-  text-align: left
-  list-style: none
-  position: relative
-  font-size: 0.8rem
-
-
-  h2
-    font-weight: bold
-    font-size: 1.2rem
-
-  &:nth-of-type(3n)
-    .news-header
-      border-bottom: 3px solid  $theme-cyan
-
-  &:nth-of-type(3n+1)
-    .news-header
-      border-bottom: 3px solid  $theme-magenta
-
-  &:nth-of-type(3n+2)
-    .news-header
-      border-bottom: 3px solid  $theme-yellow
-
-.news-text
-  margin-top: 3px
+.ticket-title
+  font-weight: bold
 </style>

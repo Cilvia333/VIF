@@ -38,6 +38,10 @@ export default class TimeTable extends Vue {
   align-items: center
   position: relative
   padding: 20px 0px
+
+  & > *
+    min-height: 120px
+
   &::after
     position: absolute
     content: ""
@@ -99,7 +103,6 @@ export default class TimeTable extends Vue {
 
 .time-group
   width: 70%
-  min-height: 100px
   position: relative
   .group-img
     position: absolute
