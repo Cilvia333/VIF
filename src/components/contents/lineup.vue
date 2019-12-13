@@ -2,6 +2,7 @@
 section#lineup
   .background
     .magenta
+    .magenta-cover
     .yellow
     .cyan
   .container
@@ -48,10 +49,21 @@ export default class LineUp extends Vue {
     top: 20%
     right: -15%
     height: 200px
-    border-left: 150vw solid $theme-magenta;
-    border-top: 10px solid transparent;
-    border-bottom: 100px solid transparent;
+    border-left: 150vw solid $theme-magenta
+    border-top: 10px solid transparent
+    border-bottom: 100px solid transparent
     transform: rotate(15deg)
+
+  // .magenta-cover
+  //   position: absolute
+  //   top: 12%
+  //   right: -10%
+  //   height: 210px
+  //   transform: rotate(15deg)
+  //   //background-color: $white
+  //   z-index: 1
+  //   width: 1200px
+  //   animation: width-rev .5s ease-out 5s forwards
   .yellow
     top: 50%
     left: -15%
