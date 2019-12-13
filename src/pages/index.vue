@@ -4,8 +4,8 @@
     News
     LineUp
     TimeTable
-    Attention
     Access
+    Attention
     Contact
     Back2top
 </template>
@@ -21,6 +21,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
     TimeTable: () => import('~/components/contents/timetable.vue'),
     Attention: () => import('~/components/contents/attention.vue'),
     Access: () => import('~/components/contents/access.vue'),
+    Ticket: () => import('~/components/contents/ticket.vue'),
     Contact: () => import('~/components/contents/contact.vue'),
     Back2top: () => import('~/components/navigations/backTop.vue')
   }

@@ -13,9 +13,9 @@ section#eyecatch
         h3 #VIF
     .overview
       .locate 
-        h2 @DMM VR Theater
+        h2 @DMM VR THEATER
       .date 
-        h2 2020/1/20
+        h2 2020/1/18
       .time 
         h2 18:00〜21:00
     .next

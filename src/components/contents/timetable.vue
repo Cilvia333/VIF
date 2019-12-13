@@ -30,7 +30,7 @@ export default class TimeTable extends Vue {
 
 <style lang="sass" scoped>
 .table
-  margin-top: 30px
+  margin: 30px 0px
 
 .table-item
   display: flex
@@ -99,7 +99,15 @@ export default class TimeTable extends Vue {
 
 .time-group
   width: 70%
+  min-height: 100px
+  position: relative
   .group-img
+    position: absolute
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
     width: 100%
   .group-name
     text-align: center

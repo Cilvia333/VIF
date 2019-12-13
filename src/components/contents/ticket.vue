@@ -15,7 +15,7 @@ section#news
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component
-export default class News extends Vue {
+export default class Ticket extends Vue {
   news = [
     {
       date: '11/12/12',
